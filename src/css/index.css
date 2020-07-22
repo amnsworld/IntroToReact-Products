@@ -1,9 +1,232 @@
-body {
-	margin: 0;
-	background-color: lightgrey;
-	font: 1em helvetica, arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,600&display=swap');
+
+
+/*Common classes*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color:#eaeded !important;
+    }
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+.column{
+    display: flex;
+    flex-direction: column;
+    }
+
+.center{
+    text-align: center;
+    }
+
+.display-none{
+    display: none;
+    }
+.center{ 
+    text-align: center;
+    }
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Crimson Text', serif;
 }
 
-.user-img{
-	width: 10em;
+p{
+    font-family: 'Source Sans Pro', sans-serif;
 }
+.errormsgs{
+    font-size: 0.9rem;
+    color: red;
+}
+
+.active{
+    border-color: red;
+    box-shadow: 0 0 0 1px red;
+}
+
+/*head*/
+.head{
+    background-color:#fff;
+    padding: 1em;
+    }
+    
+.amazon-logo{
+    width: 10em;
+    max-height: 2em;
+    }
+
+.navigation-list{ 
+    margin-left: auto;
+    }
+
+.nav-items{
+    padding: 1em;
+    }
+
+.nav-item-links {
+    color:#042C3C;
+    text-decoration: none;
+    font-size: 1.3em;
+    }
+
+.nav-item-links:hover{
+    color:#f90;
+    }
+.hamburger-mobile-view{ 
+    width: 1.5em;
+    display: none;
+}
+.nav-click{
+    flex-wrap: nowrap; 
+}
+.nav-list-onclick{ 
+    display: inline !important; 
+    margin-left: 3em; 
+    padding-top: 4em;
+}
+
+/*promotion*/
+.promotionimg{
+    width: 100%;
+    height: 30em;
+    }
+
+
+/*category*/
+
+.cat-index, .product{    
+    background-color: #fff;
+    padding: 1em;
+}
+
+.cat_section,.best_seller_section, .prod_section{
+    max-width: 90em;
+    margin: 2em auto;
+    padding: 2em;
+}
+
+.cat,.best-seller-product{
+    flex-basis: calc(95% / 4);
+    margin-bottom: 2em;
+}
+.cat img, .prod-img-container img { 
+    width:100%;
+    height: 15em;
+    }
+
+/* Best seller */
+.best_seller_section{
+    background-color: #fff; 
+}
+.best-seller-product{
+    border: 1px solid #f90; 
+    padding: 1em; 
+    border-radius: 0.5em;
+}
+
+/* Product*/
+
+.product{
+    flex-basis: calc(95% / 3);
+    margin-top: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+.product-row{
+    justify-content: space-evenly !important;
+}
+
+.product-box-anchor{
+    color: black;
+}
+
+/* Best seller text on image postioning .
+reffered https://www.w3schools.com/howto/howto_css_image_text.asp */
+
+.prod-img-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+.prod-best-seller {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    background-color: #FB9B04;
+    padding: 0.3em;
+    border-radius: 0.5em;
+  }
+
+
+/*Form*/
+.form{
+    padding: 1em;
+    width: 25em;
+    margin: 2em auto;
+    background-color: #fff;
+    border-radius: 0.5em;
+    }
+.input input{
+    width: 100%;
+    padding: .5em;
+    margin: .3em 0 1em 0;
+    border-radius: .3em;
+    }
+
+.submit-button{
+    width: 100%;
+    padding: 1em 2em;
+    border: none !important;
+    border-radius: .3em;
+    background-color: #f90;
+    color:#000; 
+    }
+span.forgot-password {
+    float: right;
+    }
+
+.forgot-password{
+    color: #04A3DF;
+    }
+
+/* Registration */
+
+.termscondtion, .already-account {
+    font-size: 0.8em;
+    margin-top: 1em;
+}
+
+/* Login */
+
+.invaliduser{
+    margin: 1em auto;
+    border: 1px solid;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.dashboard_wel{
+    font-family: Crimson Text;
+    margin: 5em;
+}
+
+/*footer*/
+.footer{ 
+    background: #fff; 
+    padding: 3em 10em;
+    }   
+
+.navigation-list-footer{
+    font-size: .8em;
+    }
+.social-media-logo-row{ 
+    width: 15em; 
+    margin: 0 auto;  
+    margin-bottom: 2em;
+    }
+
+.social-media-logo-img{ 
+    height: 1.5em; 
+    width: 1.5em;
+    }
