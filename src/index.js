@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Greeting from "./js/components/Greeting";
-import './css/index.css';
+import Greeting from "components/Greeting";
+import 'css/index.css';
 
 const App = () => {
 	return(
