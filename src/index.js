@@ -15,10 +15,12 @@ const Footer = () => {
 
 const App = () => {
 
-    const usersArr = [
-		{id: 123, name: 'Alan Turing', color: '#ff0000'},
-		{id: 456, name: 'Grace Hopper', color: '#0000ff'},
-		{id: 789, name: 'Ada Lovelace', color: '#00ff00'}
+    const productArr = [
+		{id: 1, name: 'Iphone 8', price: 200, imgpath:"products/iphone8.jpg"},
+		{id: 2, name: 'Iphone 8', price: 200, imgpath:"products/iphone8.jpg"},
+		{id: 3, name: 'Iphone 8', price: 200, imgpath:"products/iphone8.jpg"},
+		{id: 4, name: 'Iphone 8', price: 200, imgpath:"products/iphone8.jpg"},
+		{id: 5, name: 'Iphone 8', price: 200, imgpath:"products/iphone8.jpg"}
 	]
 
 	return(
@@ -26,7 +28,7 @@ const App = () => {
 			{/* This is an example comment */}
 			<Header />
             <PromotionalImage />
-            <Products data={usersArr} />
+            <Products data={productArr} />
 			<Footer />
 		</>
     )

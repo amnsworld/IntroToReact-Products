@@ -1,35 +1,43 @@
 import React from 'react';
-import test from 'img/userDemoImg.jpg';
+import test from 'img/products/iphone8.jpg';
 
 
-const ProductDescription = ({name, color}) => {
+const ProductDescription = ({name,price, imgpath}) => {
 	
-	const style = {
-		color: '#ffffff',
-		textAlign: 'center',
-		backgroundColor: color
-	}
 	
+	const ip = "img/"+ imgpath;
+	
+	//console.log("ip : "+ ip);
 	const sayHello = (event) => {
-		alert(`Hello, ${name}`)
+		alert(`${name} has been added to your cart`)
 	}
 	
 	return (
-		<article className="hello" style={style}>
-			<h1 onClick={sayHello}>Hello, {name}</h1>
-			<img src={test} alt="Just a test image" class="user-img"/>
-			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem odit assumenda dolore similique enim. Soluta dolore dicta temporibus illo. Nisi nam soluta cupiditate non laborum facilis sed necessitatibus blanditiis impedit.</p>
-		</article>
+		<>
+				<article class="cat cat-index">
+					<a href="product/listAll" class="product-box-anchor">
+						<h3 class="center">{name}</h3>
+						<img src={test} alt="Category image" />
+						<button onClick={sayHello}>Add to cart</button>
+					</a>
+				</article>
+		</>
 	)
 }
 
 const Products = ({data}) => {
     // Mapped elements MUST have a unique "key" attribute
-    const productsArr = data.map(prod => <ProductDescription key={prod.id} name={prod.name} color={prod.color} />)
+    const productsArr = data.map(prod => <ProductDescription key={prod.id} name={prod.name} price={prod.price} imgpath={prod.imgpath} />)
     
 	return (
         <main>
-            {productsArr}
+			<section class="cat_section" id="category">
+				<h2 class="">Categories</h2>
+				<div class="row">
+					{productsArr}
+				</div>
+			</section>
+
         </main>
     )
 }
